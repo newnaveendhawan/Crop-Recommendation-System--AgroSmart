@@ -9,9 +9,6 @@ A machine learning web application that suggests the most suitable crop to grow 
 - [🚀 Overview](#-overview)
 - [✨ Features](#-features)
 - [🛠️ Tools & Technologies](#-tools--technologies)
-- [🛠️ Tools & Technologies](#-tools-technologies)
-- [🛠️ Tools & Technologies](#-tools-&-technologies)
-- [🛠️ Tools & Technologies](#tools-technologies)
 - [🌐 Glimpse of Webpage](#-glimpse-of-webpage)
 - [🧠 How the Crop Recommender System Works](#-how-the-crop-recommender-system-works)
 - [📁 Project Structure](#-project-structure)
@@ -69,7 +66,6 @@ The Crop Recommender System predicts the best crop to cultivate for a given set 
 
 ## 📁 Project Structure
 ###### Crop-Recommender-System/ 
-###### │ 
 ###### ├── static/ 
 ###### │ └── images/ 
 ###### │ └── demo.png 
@@ -90,18 +86,19 @@ The Crop Recommender System predicts the best crop to cultivate for a given set 
 ###### Confirm that the form resets properly after submitting
 
 ## 📚 Project Resources
-###### Crop Recommendation Dataset – Kaggle
-###### Flask Documentation
-###### Scikit-learn Documentation
+###### 📁 Google Drive – All Project Files
+###### 📝 Notion Document – Project Notes
+###### 🎥 Live Demo Video: Watch Project in Action
+###### 🌐 Live Web App: Movie Recommender System
 
 ## 📄 License
-This project is licensed under the MIT License – see the LICENSE file for details.
+This project is licensed under the [MIT License](https://github.com/newnaveendhawan/Crop-Recommendation-System--AgroSmart/blob/main/LICENSE) – see the LICENSE file for details.
 
 ## 👨‍💻 About the Author
 ### Naveen Dhawan
-📧 newnaveendhawan@gmail.com
-[💼 LinkedIn](https://www.linkedin.com/in/newnaveendhawan/
-[📁 Portfolio](https://naveendhawanportfolio.blogspot.com/)
-🎓 BTech – NIT Warangal | Data Analyst | ML Enthusiast | Power BI & Python
+###### 📧 newnaveendhawan@gmail.com
+###### [💼 LinkedIn](https://www.linkedin.com/in/newnaveendhawan/)
+###### [📁 Portfolio](https://naveendhawanportfolio.blogspot.com/)
+###### 🎓 BTech – NIT Warangal | Data Analyst | ML Enthusiast | Power BI & Python
 
 
