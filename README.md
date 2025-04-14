@@ -6,27 +6,27 @@ A machine learning web application that suggests the most suitable crop to grow 
 
 ## 📌 Table of Contents
 
-- [🚀 Overview](#overview)
-- [✨ Features](#features)
-- [🛠️ Tech Stack](#tech-stack)
-- [🌐 Glimpse of Webpage](#glimpse-of-webpage)
-- [🧠 How the Crop Recommender System Works](#how-the-crop-recommender-system-works)
-- [📁 Project Structure](#project-structure)
-- [🚀 Deployment (Render)](#deployment-render)
-- [🧪 Testing](#testing)
-- [📚 Project Resources](#project-resources)
-- [📄 License](#license)
-- [👨‍💻 About the Author](#about-the-author)
+- [🚀 Overview](#-overview)
+- [✨ Features](#-features)
+- [🛠️ Tech Stack](#--tech-stack)
+- [🌐 Glimpse of Webpage](#-glimpse-of-webpage)
+- [🧠 How the Crop Recommender System Works](#-how-the-crop-recommender-system-works)
+- [📁 Project Structure](#-project-structure)
+- [🚀 Deployment (Render)](#-deployment-render)
+- [🧪 Testing](#-testing)
+- [📚 Project Resources](#-project-resources)
+- [📄 License](#-license)
+- [👨‍💻 About the Author](#-about-the-author)
 
 ---
 
-## Overview
+## 🚀 Overview
 
 The Crop Recommender System predicts the best crop to cultivate for a given set of environmental conditions such as nitrogen (N), phosphorus (P), potassium (K), temperature, humidity, pH, and rainfall. This project uses a trained machine learning model with a Flask frontend for a smooth and interactive user experience.
 
 ---
 
-### Features
+## ✨ Features
 
 - 🌾 Intelligent crop prediction using ML
 - 📈 Analyzes 7 input parameters
