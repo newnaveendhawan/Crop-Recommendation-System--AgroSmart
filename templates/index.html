@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crop Recommendation System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg-color: #f5f7fa;
+      --text-color: #333;
+      --card-bg: #fff;
+      --input-bg: #fff;
+      --btn-bg: #2e8b57;
+      --clear-bg: #eee;
+    }
+
+    body.dark-mode {
+      --bg-color: #1e1e1e;
+      --text-color: #f2f2f2;
+      --card-bg: #2c2c2c;
+      --input-bg: #3b3b3b;
+      --btn-bg: #4caf50;
+      --clear-bg: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      position: relative;
+      font-size: 28px;
+      z-index: 1;
+      margin-bottom: 30px;
+    }
+
+    /* Top Floating Emojis (Top to Bottom) */
+    .emoji-headline-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .emoji-headline {
+      position: absolute;
+      top: -40px;
+      font-size: 26px;
+      opacity: 0.15;
+      animation: floatDown 5s linear infinite;
+    }
+
+    .emoji-headline:nth-child(1) { left: 15%; animation-delay: 0s; }
+    .emoji-headline:nth-child(2) { left: 45%; animation-delay: 1.5s; }
+    .emoji-headline:nth-child(3) { left: 75%; animation-delay: 3s; }
+
+    @keyframes floatDown {
+      0% {
+        transform: translateY(-30px) scale(0.9);
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        transform: translateY(70px) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    /* Bottom Floating Emojis (Bottom to Top) */
+    .emoji-float-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .emoji-bottom {
+      position: absolute;
+      bottom: -30px;
+      font-size: 26px;
+      opacity: 0.15;
+      animation: floatUp 5s linear infinite;
+    }
+
+    .emoji-bottom:nth-child(1) { left: 20%; animation-delay: 0s; }
+    .emoji-bottom:nth-child(2) { left: 50%; animation-delay: 1s; }
+    .emoji-bottom:nth-child(3) { left: 80%; animation-delay: 2s; }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(30px) scale(0.9);
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        transform: translateY(-60px) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card-bg);
+      border: 1px solid var(--text-color);
+      border-radius: 20px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    .toggle-mode .icon {
+      font-size: 20px;
+    }
+
+    .input-group {
+      display: grid;
+      grid-template-columns: 1fr 2fr auto;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      background: var(--input-bg);
+      color: var(--text-color);
+    }
+
+    .clear-btn {
+      background-color: var(--clear-bg);
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .clear-btn:hover {
+      background-color: #bbb;
+    }
+
+    .submit-btn, .reset-btn {
+      width: 48%;
+      background-color: var(--btn-bg);
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .reset-btn {
+      background-color: gray;
+    }
+
+    .submit-btn:hover {
+      background-color: #247447;
+    }
+
+    .reset-btn:hover {
+      background-color: #555;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .result {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-mode" onclick="toggleMode()">
+    <div class="icon" id="modeIcon">🌙</div>
+    <div class="label" id="modeLabel">Night Mode</div>
+  </div>
+
+  <div class="card">
+    <!-- Top Emojis Floating Down -->
+    <div class="emoji-headline-container">
+      <div class="emoji-headline">🌿</div>
+      <div class="emoji-headline">🍀</div>
+      <div class="emoji-headline">🌼</div>
+    </div>
+
+    <h1>Crop Recommendation System</h1>
+
+    <form id="cropForm" action="/predict" method="post">
+      {% for field in ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall'] %}
+        <div class="input-group">
+          <label for="{{ field }}">{{ field }}:</label>
+          <input type="text" name="{{ field }}" id="{{ field }}" value="{{ values[field] if values else '' }}" required />
+          <button type="button" class="clear-btn" onclick="document.getElementById('{{ field }}').value = ''">Clear</button>
+        </div>
+      {% endfor %}
+
+      <div class="btn-container">
+        <button type="submit" class="submit-btn">🌱 Recommend Crop</button>
+        <button type="button" class="reset-btn" onclick="resetForm()">🔄 Reset Form</button>
+      </div>
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+
+    <!-- Bottom Emojis Floating Up -->
+    <div class="emoji-float-bottom">
+      <div class="emoji-bottom">🌾</div>
+      <div class="emoji-bottom">🍃</div>
+      <div class="emoji-bottom">🌻</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const icon = document.getElementById('modeIcon');
+      const label = document.getElementById('modeLabel');
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      icon.textContent = isDark ? '☀️' : '🌙';
+      label.textContent = isDark ? 'Day Mode' : 'Night Mode';
+    }
+
+    window.onload = () => {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('modeIcon').textContent = '☀️';
+        document.getElementById('modeLabel').textContent = 'Day Mode';
+      }
+    }
+
+    function resetForm() {
+      const form = document.getElementById('cropForm');
+      form.reset();
+
+      // Manually clear each input field
+      ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+
+      // Clear prediction result
+      const resultDiv = document.querySelector('.result');
+      if (resultDiv) resultDiv.textContent = '';
+    }
+  </script>
+</body>
+</html>
