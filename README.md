@@ -20,13 +20,13 @@ A machine learning web application that suggests the most suitable crop to grow 
 
 ---
 
-## 🚀 Overview
+### 🚀 Overview
 
 The Crop Recommender System predicts the best crop to cultivate for a given set of environmental conditions such as nitrogen (N), phosphorus (P), potassium (K), temperature, humidity, pH, and rainfall. This project uses a trained machine learning model with a Flask frontend for a smooth and interactive user experience.
 
 ---
 
-## ✨ Features
+### ✨ Features
 
 - 🌾 Intelligent crop prediction using ML
 - 📈 Analyzes 7 input parameters
