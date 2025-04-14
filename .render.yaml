@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: Crop Recommendation System-AgroSmart
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn main:app
