@@ -39,7 +39,7 @@ The Crop Recommender System predicts the best crop to cultivate for a given set 
 
 ---
 
-## 🛠️ Tools & Technologies
+## 🛠 Tools & Technologies
 
 | Layer            | Technologies Used                    |
 |------------------|--------------------------------------|
