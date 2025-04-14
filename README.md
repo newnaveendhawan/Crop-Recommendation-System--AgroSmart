@@ -80,5 +80,25 @@ The Crop Recommender System predicts the best crop to cultivate for a given set 
 ###### ├── Procfile 
 ###### └── README.md
 
+## 🧪 Testing
+###### Try entering different combinations of input parameters (e.g., N, P, K, pH, temperature, humidity, rainfall)
+###### Verify that the crop name is displayed correctly on the result page
+###### Ensure the user interface remains functional and responsive across screen sizes
+###### Confirm that the form resets properly after submitting
+
+## 📚 Project Resources
+###### Crop Recommendation Dataset – Kaggle
+###### Flask Documentation
+###### Scikit-learn Documentation
+
+## 📄 License
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+## 👨‍💻 About the Author
+### Naveen Dhawan
+📧 newnaveendhawan@gmail.com
+[💼 LinkedIn](https://www.linkedin.com/in/newnaveendhawan/
+[📁 Portfolio](https://naveendhawanportfolio.blogspot.com/)
+🎓 BTech – NIT Warangal | Data Analyst | ML Enthusiast | Power BI & Python
 
 
