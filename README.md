@@ -8,7 +8,7 @@ A machine learning web application that suggests the most suitable crop to grow 
 
 - [🚀 Overview](#-overview)
 - [✨ Features](#-features)
-- [🛠️ Tech Stack](#--tech-stack)
+- [🛠️ Tools & Technologies](#-Tools-&-Technologies)
 - [🌐 Glimpse of Webpage](#-glimpse-of-webpage)
 - [🧠 How the Crop Recommender System Works](#-how-the-crop-recommender-system-works)
 - [📁 Project Structure](#-project-structure)
@@ -36,7 +36,7 @@ The Crop Recommender System predicts the best crop to cultivate for a given set 
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tools & Technologies
 
 | Layer            | Technologies Used                    |
 |------------------|--------------------------------------|
