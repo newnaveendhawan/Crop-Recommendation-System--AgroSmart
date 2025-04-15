@@ -86,10 +86,10 @@ The Crop Recommender System predicts the best crop to cultivate for a given set 
 ###### Confirm that the form resets properly after submitting
 
 ## 📚 Project Resources
-###### 📁 Google Drive – All Project Files
-###### 📝 Notion Document – Project Notes
-###### 🎥 Live Demo Video: Watch Project in Action
-###### 🌐 Live Web App: Movie Recommender System
+###### [📁 Google Drive – All Project Files](https://drive.google.com/drive/folders/1BSko_zW0_xRmam-SuCNjVenKt4wrim5j?usp=drive_link)
+###### [📝 Notion Document – Project Notes](https://morning-cast-4fb.notion.site/Crop-Recommender-System-AgroSmart-1d5c0db6457880beb4a7cfa8be66a828?pvs=74)
+###### [🎥 Live Demo Video: Watch Project in Action](https://drive.google.com/file/d/1ZP1f34YxqJqh8VdJPhyPpqIKZBP4Bc_d/view?usp=drive_link)
+###### [🌐 Live Web App: Movie Recommender System](https://crop-recommendation-system-agrosmart-dcd7.onrender.com/)
 
 ## 📄 License
 This project is licensed under the [MIT License](https://github.com/newnaveendhawan/Crop-Recommendation-System--AgroSmart/blob/main/LICENSE) – see the LICENSE file for details.
