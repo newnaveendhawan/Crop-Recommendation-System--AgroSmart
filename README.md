@@ -1,4 +1,4 @@
-# 🌾 Crop-Recommendation-System--AgroSmart
+# 🌾 Crop-Recommendation-System-AgroSmart
 
 A machine learning web application that suggests the most suitable crop to grow based on various environmental conditions like soil type, temperature, humidity, and rainfall. Built using Python, Flask, and deployed using Render.
 
