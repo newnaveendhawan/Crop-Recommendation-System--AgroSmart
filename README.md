@@ -12,7 +12,6 @@ A machine learning web application that suggests the most suitable crop to grow 
 - [🌐 Glimpse of Webpage](#-glimpse-of-webpage)
 - [🧠 How the Crop Recommender System Works](#-how-the-crop-recommender-system-works)
 - [📁 Project Structure](#-project-structure)
-- [🚀 Deployment (Render)](#-deployment-render)
 - [🧪 Testing](#-testing)
 - [📚 Project Resources](#-project-resources)
 - [📄 License](#-license)
