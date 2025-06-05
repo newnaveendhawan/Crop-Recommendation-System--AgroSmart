@@ -28,7 +28,7 @@ The Crop Recommender System predicts the best crop to cultivate for a given set 
 ## ✨ Features
 
 - 🌾 Intelligent crop prediction using ML
-- 📈 Analyzes 7 input parameters
+- 📈 Analyses 7 input parameters
 - 💡 Provides real-time suggestions
 - ⚡ Deployed and accessible online
 - 🖥️ Simple and intuitive UI
